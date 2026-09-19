@@ -1,0 +1,6 @@
+"Make changes and repeat until all the unit tests pass. You will also need
+to make several changes to TestPerformance.java and record test method runtimes
+to record in a new README.txt file that you create."
+
+TODO Question: Also try with a LinkedList - does it make any difference?
+There didnt seem to be much of a difference, it seemed like they both gave similar responses
