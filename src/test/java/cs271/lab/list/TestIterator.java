@@ -80,11 +80,15 @@ public class TestIterator {
       }
     }
     // TODO using assertEquals and List.of, express which values are left in the list
-    assertEquals(List.of(33, 44, 77, 55, 77, 66), list);
+    assertEquals(List.of(33, 44, 55, 66), list);
     // See TestList.java for examples of how to use List.of; also see the Java List
     // interface for more information
   }
 
+
+  // TODO use an iterator and a while loop to compute the average (mean) of the values
+  // (defined as the sum of the items divided by the number of items)
+  // testNonempty shows how to use an iterator; use i.hasNext() in the while loop condition
   @Test
   public void testAverageValues() {
     list.add(33);
@@ -98,13 +102,11 @@ public class TestIterator {
     int n = 0;
 
     var i = list.iterator();
-    while (i.hasNext()) { //while loop
+    while (i.hasNext()) {
       sum += i.next();
       n++;
+    }
 
-    // TODO use an iterator and a while loop to compute the average (mean) of the values
-    // (defined as the sum of the items divided by the number of items)
-    // testNonempty shows how to use an iterator; use i.hasNext() in the while loop condition
     assertEquals(61.3, sum / n, 0.1);
     assertEquals(7, n);
   }

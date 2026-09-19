@@ -9,6 +9,8 @@ import org.junit.jupiter.api.Test;
 
 public class TestPerformance {
 
+
+
   // TODO run test and record running times for SIZE = 10, 100, 1000, 10000, ...
   // (choose in conjunction with REPS below up to an upper limit where the clock
   // running time is in the tens of seconds)
@@ -20,7 +22,7 @@ public class TestPerformance {
 
   // TODO choose this value in such a way that you can observe an actual effect
   // for increasing problem sizes
-  private final int REPS = 1000000;
+  private final int REPS = 100;
 
   private List<Integer> arrayList;
 
@@ -33,7 +35,9 @@ public class TestPerformance {
     for (var i = 0; i < SIZE; i++) {
       arrayList.add(i);
       linkedList.add(i);
+
     }
+
   }
 
   @AfterEach
@@ -44,33 +48,45 @@ public class TestPerformance {
 
   @Test
   public void testLinkedListAddRemove() {
+    //long start = System.currentTimeMillis();
     for (var r = 0; r < REPS; r++) {
       linkedList.add(0, 77);
       linkedList.remove(0);
     }
+    //long end = System.currentTimeMillis();
+    //System.out.println("LinkedList AddRemove: " + (end - start) + " ms");
   }
 
   @Test
   public void testArrayListAddRemove() {
+    //long start = System.currentTimeMillis();
     for (var r = 0; r < REPS; r++) {
       arrayList.add(0, 77);
       arrayList.remove(0);
     }
+    //long end = System.currentTimeMillis();     // end timing
+    //System.out.println("LinkedList Access: " + (end - start) + " ms");
   }
 
   @Test
   public void testLinkedListAccess() {
+    //long start = System.currentTimeMillis();
     var sum = 0L;
     for (var r = 0; r < REPS; r++) {
       sum += linkedList.get(r % SIZE);
     }
+    //long end = System.currentTimeMillis();
+    //System.out.println("LinkedList Access: " + (end - start) + " ms");
   }
 
   @Test
   public void testArrayListAccess() {
+    //long start = System.currentTimeMillis();
     var sum = 0L;
     for (var r = 0; r < REPS; r++) {
       sum += arrayList.get(r % SIZE);
     }
+    //long end = System.currentTimeMillis();     // end timing
+    //System.out.println("ArrayList Access: " + (end - start) + " ms");
   }
 }

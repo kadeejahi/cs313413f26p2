@@ -1,10 +1,39 @@
 "Make changes and repeat until all the unit tests pass. You will also need
 to make several changes to TestPerformance.java and record test method runtimes
 to record in a new README.txt file that you create."
-
+Test List Questions
 TODO Question: Also try with a LinkedList - does it make any difference?
 There didnt seem to be much of a difference, it seemed like they both gave similar responses
 
+
+
+
+Test Performance Questions
+
+TODO run test and record running times for SIZE = 10, 100, 1000, 10000, ...
+// (choose in conjunction with REPS below up to an upper limit where the clock
+LinkedList is quicker for front edits, while ArrayList stays faster when you just access stuff.
+
+For 100
+Linked List Add Remove 322ms
+testArrayListAddRemove 212ms
+testLinkedListAccess 213ms
+testArrayListAccess 268ms
+
+for 1000000
+Linked List add Remove in 200ms
+Array List Add Remove in 242 ms
+Test Linked list Access in 182 Ms
+Test Array List Access in 207 ms
+
+  // TODO Question: What conclusions can you draw about the performance of LinkedList vs. ArrayList when
+  // comparing their running times for AddRemove vs. Access? Record those running times in README.txt!
+  LinkedList seemed better when I kept adding and removing at the front, and ArrayList felt
+  smoother when I was just accessing stuff. The patterns stayed pretty consistent as the sizes changed.
+
+
+
+Test Iterator Questions
 TODO Question: What happens if you use list.remove(Integer.valueOf(77))?
 it will just remove the first 77 in the list and not do anything else
 
