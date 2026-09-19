@@ -4,3 +4,17 @@ to record in a new README.txt file that you create."
 
 TODO Question: Also try with a LinkedList - does it make any difference?
 There didnt seem to be much of a difference, it seemed like they both gave similar responses
+
+TODO Question: What happens if you use list.remove(Integer.valueOf(77))?
+it will just remove the first 77 in the list and not do anything else
+
+TODO using assertEquals and List.of, express which values are left in the list
+assertEquals(List.of(33, 44, 77, 55, 77, 66), list);
+This is how the values will appear when that Int value of 77 is removed
+
+TODO use an iterator and a while loop to compute the average (mean) of the values
+var i = list.iterator();
+    while (i.hasNext()) { //while loop
+      sum += i.next();
+      n++;
+
