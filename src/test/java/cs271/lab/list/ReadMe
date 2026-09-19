@@ -5,8 +5,11 @@ Test List Questions
 TODO Question: Also try with a LinkedList - does it make any difference?
 There didnt seem to be much of a difference, it seemed like they both gave similar responses
 
+// TODO Question: What does this method do?
+It removes the element at index 5 , second to last 77
 
-
+list.remove(Integer.valueOf(5)); // TODO Question: What does this one do?
+It removes the element with value 5 instead of just index
 
 Test Performance Questions
 
